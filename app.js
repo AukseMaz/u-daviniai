@@ -615,5 +615,16 @@ function didziausiasSkaicius(masyvas) {
     return didziausiasSkaicius;
 }
 
+/* Kitas variantas
+function didziausiasSkaicius(masyvas) {
+    const sortMasyvas = masyvas.sort((a, b) => b - a);
+    return sortMasyvas[0];
+}
+
+Trumpas variantas
+function didziausiasSkaicius(masyvas) {
+return Math.max(...masyvas);
+}
+*/
 console.log(didziausiasSkaicius([23, 54, 100, 35, 1, 78])); // 100
 console.log(didziausiasSkaicius([156, 7, 17643, 635, 13, 1456])); // 17643
