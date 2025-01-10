@@ -174,6 +174,11 @@ function neNelyginiai(masyvas) {
      return lyginiai;
 }
 
+/* Kitas variantas
+ function neNelyginiai(masyvas) {
+    return masyvas.filter(el => el % 2 === 0);
+}*/
+
 console.log(neNelyginiai([0, 1, 2])); // [0, 2]
 console.log(neNelyginiai([-3, -2, -1, 0, 1, 2])); // [-2, 0, 2]
 
