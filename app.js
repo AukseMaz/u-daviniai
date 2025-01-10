@@ -411,6 +411,7 @@ function sauktukai(stringas) {
  const atgalStringas = masyvasBeSauktuku.join('') + '!';
  return atgalStringas; 
  }*/
+
 console.log(sauktukai("Cha!")); // Cha!
 console.log(sauktukai("Cha!!!")); // Cha!
 console.log(sauktukai("!Cha")); // Cha!
@@ -428,6 +429,11 @@ function keitimas(masyvas) {
     }
     return rezultatas;
 }
+
+/* Trumpas variantas
+ function keitimas(masyvas) {
+ return masyvas.map(el => el === 0 ? el : -el);
+}*/
 
 console.log(keitimas([-4, 2, 0, 6, -9])); // [4, -2, 0, -6, 9]
 console.log(keitimas([5, 13, -67, -71])); // [-5, -13, 67, 71]
