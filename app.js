@@ -317,11 +317,12 @@ console.log(kortosRusis('A♠')); // vynai
 
 // a. variantas su dirbant su kiekvienu argumentu
 function amziausSpejimas(metai1, metai2, metai3, metai4, metai5, metai6, metai7, metai8) {
-   // čia visa logika
-    return 
+  const kvadratuIrSuma = metai1 ** 2 + metai2 ** 2 + metai3  ** 2 + metai4  ** 2 + metai5  ** 2 + metai6  ** 2 + metai7  ** 2 + metai8  ** 2;
+  const saknis = Math.sqrt(kvadratuIrSuma);
+  return Math.floor(saknis / 2);
 }
 
-// b. Variantas paimant argumentus kaip masyvą
+/* // b. Variantas paimant argumentus kaip masyvą
 function amziausSpejimas(metai1, metai2, metai3, metai4, metai5, metai6, metai7, metai8) {
     const metai = [metai1, metai2, metai3, metai4, metai5, metai6, metai7, metai8].map(Number); // paverčiu sk.
     const metaiSkaitmenys = metai.map(Number); // čia tik sk.
@@ -329,7 +330,7 @@ function amziausSpejimas(metai1, metai2, metai3, metai4, metai5, metai6, metai7,
     const kvadratineSaknis = Math.sqrt(proseneliaiKvadratu);
     const prognozuojamasAmzius = Math.floor(kvadratineSaknis / 2);
     return prognozuojamasAmzius;
-}
+} */
 
 console.log(amziausSpejimas('65', '87', '30', '58', '92', '78', '68', '73')); // 100
 console.log(amziausSpejimas('5', '7', '3', '5', '2', '7', '6', '3')); // 7
