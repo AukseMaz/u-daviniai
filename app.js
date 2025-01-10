@@ -187,7 +187,7 @@ console.log(neNelyginiai([-3, -2, -1, 0, 1, 2])); // [-2, 0, 2]
 // Atrinkti skaičiai turi būti grąžinti ta pačia tvarka kaip originaliame masyve.
 
 // a. Variantas einant ciklu per masyvą
-function nedaugiauNeiNKartu(masyvas, n) {
+/* function nedaugiauNeiNKartu(masyvas, n) {
     const rezultatas = []; // tuščias masyvas elementams dėti
     const kartojimas = {}; // objektas, skaičiuosiantis, kiek k. kiekv. elementas pasikartojo
 
@@ -200,12 +200,27 @@ function nedaugiauNeiNKartu(masyvas, n) {
         }
     }
     return rezultatas;
-}
+} */
+/* function nedaugiauNeiNKartu(masyvas, n) {
+    const rezultatas = [];
+    masyvas.forEach(el =>) {
+        if(rezultatas.filter(e => e === el).length < n)
+        rezultatas.push(el);
+        }
+    }); 
+    return rezultatas;
+}*/
 
 // b. Variantas naudojant filtravimą filtravime.
 function nedaugiauNeiNKartu(masyvas, n) {
-    // čia visa logika
-     return 
+    const rezultatas = masyvas.filter((el, index, arr) => {
+        const sliceMasyvas = arr.slice(0, index + 1);
+        console.log(sliceMasyvas);
+        const pasikartojimai = sliceMasyvas.filter(x => x === el).length;
+        console.log(pasikartojimai);
+        return pasikartojimai <= n;
+    })
+    return rezultatas;
 }
 
 console.log(nedaugiauNeiNKartu([1, 3, 4, 1, 4, 1, 4, 3], 2)); // [1, 3, 4, 1, 4, 3]
