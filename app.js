@@ -357,7 +357,7 @@ console.log(trumpasStringasSuTarpais('saulė,pieva,jūra,lietus')); // pieva jū
 //  *****
 
 // a. Variantas naudojant for ciklą
-function eglute(aukstai) {
+/* function eglute(aukstai) {
     let rez = '';
     for (let i = 0; i < aukstai; i++) {
         const tarpai = ' '.repeat(aukstai - i - 1);
@@ -365,12 +365,17 @@ function eglute(aukstai) {
         rez += tarpai + asteriksai + '\n';
     }
     return rez;
-}
+} */
 
 // b. Variantas naudojant .map
 function eglute(aukstai) {
-    // čia visa logika
-    return
+    const egle = new Array(aukstai).fill('');
+    const rez = egle.map((_, i) => {
+        const tarpai = ' '.repeat(aukstai - i - 1);
+        const asteriksai = '*'.repeat(2 * i + 1);
+        return tarpai + asteriksai + tarpai; 
+    });
+    return rez.join('\n');
 }
 
 console.log(eglute(4));
