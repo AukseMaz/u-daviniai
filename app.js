@@ -404,6 +404,13 @@ function sauktukai(stringas) {
     return sauktukasTikGale.trim() + '!';
 }
 
+/* Ilgas variantas
+ function sauktukai(stringas) {
+ const masyvas = stringas.split(');
+ const masyvasBeSauktuku = masyvas.filter(el => el !== '!');
+ const atgalStringas = masyvasBeSauktuku.join('') + '!';
+ return atgalStringas; 
+ }*/
 console.log(sauktukai("Cha!")); // Cha!
 console.log(sauktukai("Cha!!!")); // Cha!
 console.log(sauktukai("!Cha")); // Cha!
