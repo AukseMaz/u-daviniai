@@ -475,6 +475,19 @@ function eiliuSvoriai(masyvas) {
     return [suma1, suma2];
 }
 
+/* Kitas variantas
+function eiliuSvoriai(masyvas) {
+const pirmaEile = [];
+const antraEile = [];
+masyvas.forEach((el, i) => i % 2 === 0 ? pirmaEile.push(el) : antraEile.push(el));
+return[pirmaEile.reduce((sum, el) => sum += el, 0), antraEile.reduce((sum, el) => sum += el, 0)]
+} */
+
+/* Trumpas variantas
+function eiliuSvoriai(masyvas) {
+    return masyvas.reduce((acc, el, i) => (acc[i % 2] += el, acc), [0, 0])
+}
+*/
 console.log(eiliuSvoriai([48, 44, 62, 76])); // [110, 120]
 console.log(eiliuSvoriai([50, 60, 70, 80])); // [120, 140]
 
