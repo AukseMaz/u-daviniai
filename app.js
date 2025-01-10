@@ -536,6 +536,17 @@ function reklama(stringas, kaina) {
     return kainaViso;
 }
 
+/* Trumpas variantas
+    function reklama(stringas, kaina) {
+        return string.repeat(kaina).length;
+}
+*/
+
+/* Kitas trumpas
+function reklama(stringas, kaina) {
+    return stringas.replaceAll(/./g, 3).split('').map((val) => +val).reduce((acc, val) => acc + val, 0);
+} */
+
 console.log(reklama('Sveiki atvykę!', 3)); // 42
 console.log(reklama('Geriausi makaronai mieste!', 3)); // 78
 
