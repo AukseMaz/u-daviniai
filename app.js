@@ -438,7 +438,6 @@ function keitimas(masyvas) {
 console.log(keitimas([-4, 2, 0, 6, -9])); // [4, -2, 0, -6, 9]
 console.log(keitimas([5, 13, -67, -71])); // [-5, -13, 67, 71]
 
-
 // 14. Užduotis
 // Parašykite funkciją, kuriai paduodamas skaičius, o ji grąžina artimiausią skaičių, kuris yra kažkokio skaičiaus kvadratas.
 
