@@ -511,6 +511,11 @@ function didelisStringas(stringas1, stringas2) {
     return savotiskas.join('');
 }
 
+/* Trumpas varaintas
+ function didelisStringas(stringas1, stringas2) {
+    return [...new Set(s1 + s2)].sort().join('');
+}*/
+
 console.log(didelisStringas('labanakt', 'vidurvasaris')); // abdiklnrstuv
 console.log(didelisStringas('saulekaita', 'kopustiene')); // aeiklnopstu
 console.log(didelisStringas('vasara', 'pavasaris')); // aiprsv
