@@ -566,6 +566,19 @@ function stringasIskaicius(stringas) {
     return rezultatas;
 }
 
+/* Kitas variantas
+function stringasIskaicius(stringas) {
+const masyvasIsStringo = stringas.split('');
+const keitimasISkaicius = masyvasIsStringo.map(el => el < 5 ? 0 : 1);
+return keitimasISkaicius.join('');
+}
+ */
+
+/* Trumpas variantas
+function stringasIskaicius(stringas) {
+return [...stringas].map(a => +a < 5 ? 0 : 1).join('');
+}
+ */
 console.log(stringasIskaicius('4536271809')); // 0101010101
 
 // 19. Užduotis
